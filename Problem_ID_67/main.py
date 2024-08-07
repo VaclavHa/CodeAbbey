@@ -11,16 +11,16 @@ def get_and_parse_data(input):
 
 
 def fibonnaci(data):
-    fib_sequence = [0, 1]
+    fibonacci_seq = [0, 1]
 
-    while len(fib_sequence) <= 1000:
-        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    while len(fibonacci_seq) <= 1000:
+        fibonacci_seq.append(fibonacci_seq[-1] + fibonacci_seq[-2])
 
-    fib_index_map = {value: index for index, value in enumerate(fib_sequence)}
+    fib_index_map = {value: index for index, value in enumerate(fibonacci_seq)}
 
-    indices = [fib_index_map[num] for num in data if num in fib_index_map]
+    indicies = [fib_index_map[num] for num in data if num in fib_index_map]
 
-    return indices
+    return indicies
 
 
 if __name__ == '__main__':
